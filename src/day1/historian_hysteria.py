@@ -1,3 +1,5 @@
+from src.utilities.file_processing import read_lines_from_file
+
 def get_total_distance(input_data):
     list1 = []
     list2 = []
@@ -28,10 +30,6 @@ def get_similarity_score(input_data):
         if value in right_number_map:
             get_similarity_score += value * right_number_map[value]
     return get_similarity_score
-
-def read_lines_from_file(file_name: str):
-    with open(file_name, "r") as text_file:
-        return [x.strip() for x in text_file.readlines()]
 
 def get_total_distance_from_file(input_file):
     input_data = read_lines_from_file(input_file)
