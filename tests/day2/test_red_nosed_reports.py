@@ -1,4 +1,6 @@
 from src.day2.red_nosed_reports import get_count_of_safe_reports, get_count_of_safe_reports_from_file, is_report_line_safe
+from src.settings import PROJECT_ROOT
+
 
 def test_part1_sample_data():
     sample_data = [
@@ -15,7 +17,7 @@ def test_part1_sample_data():
     assert result == 2
 
 def test_part1_sample_data_from_file():
-    result = get_count_of_safe_reports_from_file("data_sample.txt", False)
+    result = get_count_of_safe_reports_from_file(PROJECT_ROOT + "/day2/data_sample.txt", False)
 
     assert result == 2
 
@@ -32,6 +34,6 @@ def test_part2_is_report_safe_another_flaw():
     assert result == True
 
 def test_part2_sample_data_from_file():
-    result = get_count_of_safe_reports_from_file("data_sample.txt", True)
+    result = get_count_of_safe_reports_from_file(PROJECT_ROOT + "/day2/data_sample.txt", True)
 
     assert result == 4

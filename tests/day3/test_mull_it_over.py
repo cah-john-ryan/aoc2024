@@ -1,6 +1,9 @@
 import src.day3.mull_it_over as mull
 import pytest
 
+from src.settings import PROJECT_ROOT
+
+
 def test_find_multipliers():
     result = mull.find_multipliers("xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))")
 
@@ -31,6 +34,6 @@ def test_add_it_up():
     assert result == 161
 
 def test_add_it_up_from_file():
-    result = mull.add_it_up_from_file("data_sample.txt")
+    result = mull.add_it_up_from_file(PROJECT_ROOT + "/day3/data_sample.txt")
 
     assert result == 161
