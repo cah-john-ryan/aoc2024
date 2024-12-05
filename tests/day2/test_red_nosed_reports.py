@@ -17,7 +17,7 @@ def test_part1_sample_data():
     assert result == 2
 
 def test_part1_sample_data_from_file():
-    result = get_count_of_safe_reports_from_file(PROJECT_ROOT + "/day2/data_sample.txt", False)
+    result = get_count_of_safe_reports_from_file(PROJECT_ROOT + "/day2/data_sample_part1.txt", False)
 
     assert result == 2
 
@@ -34,6 +34,6 @@ def test_part2_is_report_safe_another_flaw():
     assert result == True
 
 def test_part2_sample_data_from_file():
-    result = get_count_of_safe_reports_from_file(PROJECT_ROOT + "/day2/data_sample.txt", True)
+    result = get_count_of_safe_reports_from_file(PROJECT_ROOT + "/day2/data_sample_part1.txt", True)
 
     assert result == 4

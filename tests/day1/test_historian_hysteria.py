@@ -15,7 +15,7 @@ def test_part_1_sample():
     assert get_total_distance(sample_1_data) == 11
 
 def test_part_1_sample_file():
-    assert get_total_distance_from_file(PROJECT_ROOT + "/day1/data_sample.txt") == 11
+    assert get_total_distance_from_file(PROJECT_ROOT + "/day1/data_sample_part1.txt") == 11
 
 def test_part_2_sample():
     sample_1_data = [
@@ -29,4 +29,4 @@ def test_part_2_sample():
     assert get_similarity_score(sample_1_data) == 31
 
 def test_part_2_sample_file():
-    assert get_similarity_score_from_file(PROJECT_ROOT + "/day1/data_sample.txt") == 31
+    assert get_similarity_score_from_file(PROJECT_ROOT + "/day1/data_sample_part1.txt") == 31
