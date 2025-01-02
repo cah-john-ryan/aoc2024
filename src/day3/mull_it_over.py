@@ -10,7 +10,7 @@ dont_length = 7
 
 class MullItOverProcessor:
     def __init__(self, input_string: str):
-        self.input_string: str | None = input_string
+        self.input_string: str = input_string
         self.enabled_multiplier_sections: list[str] = []
         self.build_multiplier_sections()
 
@@ -34,7 +34,7 @@ class MullItOverProcessor:
                 self.input_string = self.input_string[start_of_next_multiplier_section + do_length:]
 
     @staticmethod
-    def find_next_position(input_string: str, pattern_to_match: str) -> None | int:
+    def find_next_position(input_string: str, pattern_to_match: str) -> int:
         match = re.search(pattern_to_match, input_string)
         return match.start() if match else None
 
